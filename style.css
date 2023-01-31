@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(./images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: rgb(212, 44, 7);
+    color: whitesmoke;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin: 0 3px;
+}
+
+nav button:hover{
+    background-color: #fff;
+    color: black;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;
+    background: transparent;
+    border: 1px solid whitesmoke;
+    padding: 7px 20px;
+    align-items: center;
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.headercontent{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top:50px;
+}
+
+.headercontent h1{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70px;
+    max-width: 650px;
+}
+
+.headercontent h3{
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.email-signup{
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button{
+    background: rgb(212, 44, 7);
+    border: 0;
+    outline: 0;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.features{
+    padding: 15px 12%;
+    font-size: 22px;
+
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+    font-size:  50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#h h2{
+    font-size: 45px;
+}
+
+#hi h2{
+    font-size: 45px;
+}
+
+/* faq */
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordian{
+    margin: 30px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordian li label{
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background:#303030 ;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.8s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordian .content{
+    background: #303030;
+    text-align: left;
+    border-radius:8px;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: maxheight 0.4s, padding 0.4s;
+}
+
+.accordian input[type="radio"]:checked + label + .content{
+    max-height:  600px;
+    padding: 30px 20px;
+}
+
+.accordian input[type="radio"]:checked + label::after{
+    transform:rotate(135deg);   
+}
+
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+
+}
+
+.faq small{
+    font-size: 15px;
+}
+
+
+/* footer */
+
+footer{
+    padding: 50px 15% 10px ;
+    border: 5px solid #333;
+    color: #777;
+
+}
+
+footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(151, 158, 199);
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer a:hover{
+   color: whitesmoke;
+   transition: 0.5s;
+}
+
+footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+footer button{
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.copyright-text{
+    font-size: 14px;
+    margin-top:20px ;
+    margin-bottom: 10px;
+}
+
+/* media */
+
+@media only screen and (max-width:600px){
+    .logo{
+        width: 100px;
+    }
+     
+    nav button {
+        padding: 5px 10px;
+
+    }
+    nav .language-btn{
+        padding: 4px 8px;
+    }
+
+    .headercontent{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .headercontent h1{
+        font-size: 30px;
+    }
+}
